@@ -10,6 +10,16 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
+from flask_cors import CORS
+
+# Configuración de tu aplicación Flask
+app = Flask(__name__)
+
+# Habilitar CORS
+CORS(app)
+
+# Opcional: Si deseas permitir solo ciertos dominios:
+# CORS(app, resources={r"/*": {"origins": "https://psychic-couscous-pjgpqxwxxq562rxxr-3000.app.github.dev"}})
 
 # from models import Person
 
